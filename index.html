@@ -232,13 +232,58 @@
     opacity: 0;
     animation: fadeIn 1s ease forwards 0.6s;
   }
-<div class="hero-photo">
-  <img src="photo.jpg" alt="Bohdan Beisiuk">
-</div>
+
+  .hero-photo {
+    width: 420px;
+    height: 540px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05));
+    border: 2px solid rgba(201,168,76,0.3);
+    margin-bottom: 40px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-stats {
+    text-align: center;
+  }
+
+  .stat-block {
+    margin-bottom: 24px;
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    max-width: 180px;
+  }
 
   /* ── SECTIONS ── */
   section {
-    padding: 100px 0;
+    padding: 140px 0;
   }
 
   .container {
@@ -325,6 +370,7 @@
   }
 
   .help-icon {
+    display: none;
     font-size: 48px;
     margin-bottom: 20px;
   }
@@ -582,6 +628,7 @@
   }
 
   .skill-icon {
+    display: none;
     font-size: 28px;
     margin-bottom: 16px;
     display: block;
@@ -601,6 +648,7 @@
 
   /* ── ACHIEVEMENTS ── */
   .achievements-section {
+    display: none;
     background: var(--cream);
     position: relative;
     overflow: hidden;
@@ -1049,7 +1097,7 @@
 <!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-left">
-    <div class="hero-tag">Business Development · Strategy · Mentoring</div>
+    <div class="hero-tag">Business Development · Strategy · Outreach</div>
     <h1>Bohdan<span>Beisiuk</span></h1>
     <p class="hero-subtitle">B2B Strategy · Ukrainian Market Research · BD Leadership</p>
     <p class="hero-summary">
@@ -1065,28 +1113,7 @@
 
   <div class="hero-right">
     <div class="hero-photo">
-      <img src="<div style="width:280px;height:340px;position:relative;">
-  <img src="photo.jpg" style="width:100%;height:100%;object-fit:cover;">
-  <div style="position:absolute;inset:0;border:3px solid #5a7a94;"></div>
-</div>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-block">
-        <div class="stat-num">14k</div>
-        <div class="stat-label">Agencies onboarded from zero</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-num">30+</div>
-        <div class="stat-label">International team members led</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-num">8+</div>
-        <div class="stat-label">Years in business development</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-num">4→100</div>
-        <div class="stat-label">Company headcount scaled</div>
-      </div>
+      <img src="photo.jpg" alt="Bohdan Beisiuk">
     </div>
   </div>
 </section>
@@ -1099,7 +1126,6 @@
     <div class="help-grid">
 
       <div class="help-card">
-        <div class="help-icon">⚡</div>
         <h3>B2B Full-Cycle Strategy & Outreach</h3>
         <p>End-to-end BD from ICP definition to campaign execution. I help you build the outreach engine that converts.</p>
         <ul class="help-list">
@@ -1112,7 +1138,6 @@
       </div>
 
       <div class="help-card">
-        <div class="help-icon">🇺🇦</div>
         <h3>Ukrainian Market Research & Entry</h3>
         <p>Specialist research for companies evaluating or entering Ukraine. Local expertise backed by on-the-ground networks.</p>
         <ul class="help-list">
@@ -1124,7 +1149,6 @@
       </div>
 
       <div class="help-card">
-        <div class="help-icon">🚀</div>
         <h3>BD Mentoring & Leadership Development</h3>
         <p>One-on-one coaching for BD professionals who want to grow into leaders. Real-world insights from 8+ years in the field.</p>
         <ul class="help-list">
@@ -1136,7 +1160,6 @@
       </div>
 
       <div class="help-card">
-        <div class="help-icon">🎖️</div>
         <h3>Senior Advisory & Interim Leadership</h3>
         <p>Fractional or interim BD leadership when you need seniority without a full-time hire. Build functions from scratch.</p>
         <ul class="help-list">
@@ -1176,17 +1199,17 @@
 
       <div class="case-study-card">
         <div class="case-study-meta">
-          <span class="case-study-company">CFC Big Ideas</span>
-          <span class="case-study-period">2023–Present</span>
+          <span class="case-study-company">Vision Business Development</span>
+          <span class="case-study-period">2023–April 2026</span>
         </div>
-        <h3>Connecting Ukrainian Tech to GCC Investment</h3>
+        <h3>Connecting European to GCC Investment</h3>
         <div class="case-study-challenge">
           <div class="case-study-challenge-label">The Challenge</div>
-          <p>Ukrainian tech companies and innovations had no clear pathway to GCC (Gulf Cooperation Council) investors. Cultural and market gaps made direct outreach ineffective.</p>
+          <p>European tech companies and innovations had no clear pathway to GCC (Gulf Cooperation Council) investors. Cultural and market gaps made direct outreach ineffective.</p>
         </div>
         <div class="case-study-result">
           <div class="case-study-result-label">The Result</div>
-          <p>Developed cross-border business development strategy, sourced investment partnerships, and facilitated connections between Ukrainian businesses and GCC partners. Leveraged dual market presence (Kyiv/Abu Dhabi).</p>
+          <p>Developed cross-border business development strategy, sourced investment partnerships, and facilitated connections between European businesses and GCC partners. Leveraged dual market presence (Europe/Abu Dhabi).</p>
         </div>
       </div>
 
@@ -1220,7 +1243,7 @@
       <div class="timeline-item">
         <div class="job-header">
           <div class="job-title">Business Development Manager</div>
-          <div class="job-dates">Feb 2023 – Present</div>
+          <div class="job-dates">Feb 2023 – April 2026</div>
         </div>
         <div class="job-company">CFC Big Ideas / Vision Business Development · Kyiv, Ukraine & Abu Dhabi, UAE</div>
         <ul class="job-bullets">
@@ -1280,27 +1303,22 @@
     <h2>Core Capabilities</h2>
     <div class="skills-grid">
       <div class="skill-card">
-        <span class="skill-icon">🎯</span>
         <h3>B2B Business Development</h3>
         <p>Building and executing growth strategies from the ground up — from market analysis through to closing enterprise deals.</p>
       </div>
       <div class="skill-card">
-        <span class="skill-icon">📧</span>
         <h3>Outreach & Email Marketing</h3>
         <p>Designing and running large-scale outreach campaigns with measurable pipeline results using Apollo, Woodpecker, and SalesHandy.</p>
       </div>
       <div class="skill-card">
-        <span class="skill-icon">👥</span>
         <h3>Team Leadership</h3>
         <p>Building international teams from zero, creating onboarding materials, and managing cross-functional performance across time zones.</p>
       </div>
       <div class="skill-card">
-        <span class="skill-icon">🌍</span>
         <h3>Stakeholder Engagement</h3>
         <p>Comfortable navigating C-suite negotiations, government bodies, NGOs, and academic institutions across three languages.</p>
       </div>
       <div class="skill-card">
-        <span class="skill-icon">🚀</span>
         <h3>Start-up Scaling</h3>
         <p>Proven experience taking early-stage operations and building the infrastructure, teams, and processes needed for rapid growth.</p>
       </div>
@@ -1342,33 +1360,30 @@
     <div class="testimonials-grid">
 
       <div class="testimonial-card">
-        <p class="testimonial-quote">Bohdan transformed our outreach strategy from scattered efforts into a systematic, data-driven machine. In 6 months, we went from 50 qualified leads/month to 200+. Highly recommend.</p>
+        <p class="testimonial-quote">Bohdan led the business development direction with high level of ownership and strategic focus. He oversaw the full BD cycle, managed SDR teams, and achieved a 30% reply rate on outreach campaigns. His structured approach to building and scaling pipelines, combined with persistence in complex international environments, consistently delivered impact.</p>
         <div class="testimonial-author">
-          <div class="testimonial-avatar">👤</div>
           <div class="testimonial-info">
-            <h4>Sarah Mitchell</h4>
-            <p>Head of Sales, B2B SaaS</p>
+            <h4>Konstantin Gridin</h4>
+            <p>Founder & CEO, Vision Business Development</p>
           </div>
         </div>
-        <a href="https://linkedin.com" target="_blank" class="testimonial-link">View on LinkedIn ↗</a>
+        <a href="https://www.linkedin.com/in/konstantin-gridin/" target="_blank" class="testimonial-link">View on LinkedIn ↗</a>
       </div>
 
       <div class="testimonial-card">
-        <p class="testimonial-quote">Working with Bohdan was a game-changer for our team. His mentoring helped me move from individual contributor to team lead in 8 months. He breaks down complex BD strategy into actionable steps.</p>
+        <p class="testimonial-quote">Bohdan is an exceptional manager and problem solver with rare people skills. He successfully managed a team of 30 people with strong emotional intelligence and high standards. He helped us scale from 4 to over 100 people. An honest, hardworking individual who never rests till finding solutions. I would confidently recommend him for operational success.</p>
         <div class="testimonial-author">
-          <div class="testimonial-avatar">👤</div>
           <div class="testimonial-info">
-            <h4>Marcus Johnson</h4>
-            <p>BD Manager, Tech Startup</p>
+            <h4>Gianluca Ferruggia</h4>
+            <p>Fractional CMO & CRO, Ex-GM @ DesignRush</p>
           </div>
         </div>
-        <a href="https://linkedin.com" target="_blank" class="testimonial-link">View on LinkedIn ↗</a>
+        <a href="https://www.linkedin.com/in/gianluca-ferruggia-a01a276b/" target="_blank" class="testimonial-link">View on LinkedIn ↗</a>
       </div>
 
       <div class="testimonial-card">
         <p class="testimonial-quote">Bohdan's insights into the Ukrainian market were invaluable. He didn't just provide research—he opened doors and connected us with the right partners. Smart, strategic, and deeply committed.</p>
         <div class="testimonial-author">
-          <div class="testimonial-avatar">👤</div>
           <div class="testimonial-info">
             <h4>Elena Kovacs</h4>
             <p>CEO, European Tech Company</p>
@@ -1397,7 +1412,7 @@
       <span class="tool-tag">Slack</span>
       <span class="tool-tag">Microsoft Teams</span>
       <span class="tool-tag">CRM Systems</span>
-      <span class="tool-tag">Email Automation</span>
+      <span class="tool-tag">LinkedIn Sales Navigator</span>
       <span class="tool-tag">Data Management</span>
     </div>
   </div>
