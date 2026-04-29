@@ -1,0 +1,55 @@
+# ============================================
+# ROBOTS.TXT FOR BOHDANBEISIUK.COM
+# ============================================
+
+# Allow all robots to crawl your entire site
+User-agent: *
+Allow: /
+
+# Specific Allow rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block low-quality/spam bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MojeekBot
+Disallow: /
+
+# Crawl delay (optional - tells bots to wait 1 second between requests)
+Crawl-delay: 1
+
+# Request rate (optional - limits requests per second)
+# Request-rate: 1/1s
+
+# ============================================
+# SITEMAP LOCATION
+# ============================================
+Sitemap: https://bohdanbeisiuk.com/sitemap.xml
+
+# ============================================
+# PAGE STRUCTURE (for reference)
+# ============================================
+# Homepage: https://bohdanbeisiuk.com/
+# Sections: #help, #case-studies, #blog, #testimonials, #experience, #contact
+# Blog Post 1: https://bohdanbeisiuk.com/blog-post-1.html
+# Blog Post 2: https://bohdanbeisiuk.com/blog-post-2.html
+# Blog Post 3: https://bohdanbeisiuk.com/blog-post-3.html
+# ============================================
+
