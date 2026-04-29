@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Bohdan Beisiuk - Business Development Professional. 7+ years scaling B2B operations, building outreach teams, and entering new markets across Europe, North America, and EMEA.">
+<meta name="description" content="Bohdan Beisiuk - Business Development Professional. 8+ years scaling B2B operations, building outreach teams, and entering new markets across Europe, North America, and EMEA.">
 <meta name="keywords" content="Business Development, B2B, Outreach, Ukraine, Market Research, Leadership, Mentoring">
 <meta name="author" content="Bohdan Beisiuk">
 <meta property="og:title" content="Bohdan Beisiuk — Business Development & Strategy">
-<meta property="og:description" content="Results-driven BD professional with 7+ years of experience scaling teams and pipelines globally.">
+<meta property="og:description" content="Results-driven BD professional with 8+ years of experience scaling teams and pipelines globally.">
 <meta property="og:type" content="website">
-<title>Bohdan Beisiuk — Business Development Professional</title> <link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>Bohdan Beisiuk — Business Development Professional</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BQRP4ZKMW"></script>
 <script>
@@ -860,6 +861,76 @@
     box-shadow: 0 4px 12px rgba(201, 168, 76, 0.2);
   }
 
+  /* ── BLOG ── */
+  .blog-section { background: var(--warm-white); }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 32px;
+  }
+
+  .blog-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 6px;
+    padding: 32px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+    border-color: rgba(201,168,76,0.4);
+  }
+
+  .blog-date {
+    font-size: 12px;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .blog-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #ffffff;
+  }
+
+  .blog-card h3 a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .blog-card h3 a:hover {
+    color: var(--gold);
+  }
+
+  .blog-card p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .read-more {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  .read-more:hover {
+    color: var(--gold-light);
+  }
+
   /* ── CONTACT ── */
   .contact-section { background: var(--cream); }
 
@@ -1097,7 +1168,7 @@
     <li><a href="#help">How I Help</a></li>
     <li><a href="#case-studies">Case Studies</a></li>
     <li><a href="#testimonials">Testimonials</a></li>
-    <li><a href="#experience">Experience</a></li>
+    <li><a href="#blog">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -1235,6 +1306,38 @@
           <div class="case-study-result-label">The Result</div>
           <p>Analyzed corporate hierarchies across Cyprus, China, India, and Malaysia. Led development of Thomson Reuters Translation Tool. Trained and coordinated global teams.</p>
         </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog-section" id="blog">
+  <div class="container">
+    <div class="section-label">Insights</div>
+    <h2>Latest Articles</h2>
+    <div class="blog-grid">
+      
+      <div class="blog-card">
+        <div class="blog-date">April 15, 2026</div>
+        <h3><a href="blog-post-1.html">How to Scale a B2B Outreach Team from 0-30 People</a></h3>
+        <p>We scaled DesignRush's outreach team from zero to 30 people in 18 months. Here's the exact playbook we used.</p>
+        <a href="blog-post-1.html" class="read-more">Read More →</a>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-date">April 10, 2026</div>
+        <h3><a href="blog-post-2.html">30% Reply Rate: Our Winning Outreach Strategy</a></h3>
+        <p>Most outreach gets 2-5% reply rates. Here's how we consistently hit 30% using data-driven tactics.</p>
+        <a href="blog-post-2.html" class="read-more">Read More →</a>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-date">April 5, 2026</div>
+        <h3><a href="blog-post-3.html">Building BD Pipelines: The Complete Guide</a></h3>
+        <p>A step-by-step guide to building a sustainable BD pipeline that generates predictable revenue growth.</p>
+        <a href="blog-post-3.html" class="read-more">Read More →</a>
       </div>
 
     </div>
@@ -1387,17 +1490,6 @@
           </div>
         </div>
         <a href="https://www.linkedin.com/in/gianluca-ferruggia-a01a276b/" target="_blank" class="testimonial-link">View on LinkedIn ↗</a>
-      </div>
-
-      <div class="testimonial-card">
-        <p class="testimonial-quote">Bohdan's insights into the Ukrainian market were invaluable. He didn't just provide research—he opened doors and connected us with the right partners. Smart, strategic, and deeply committed.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-info">
-            <h4>Elena Kovacs</h4>
-            <p>CEO, European Tech Company</p>
-          </div>
-        </div>
-        <a href="https://linkedin.com" target="_blank" class="testimonial-link">View on LinkedIn ↗</a>
       </div>
 
     </div>
