@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How to scale a B2B outreach team from 0 to 30 people. Learn the exact playbook we used at DesignRush to grow from zero to 14,000 agencies in 3 years.">
+<meta name="keywords" content="B2B outreach, team scaling, sales team, business development, outreach strategy, data collection">
+<title>How to Scale a B2B Outreach Team | Bohdan Beisiuk</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1f3c;
+    --navy-mid: #1a3558;
+    --navy-light: #162d52;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --cream: #162d52;
+    --warm-white: #0d1f3c;
+    --text: #ffffff;
+    --muted: #a8b8cc;
+    --card-bg: #1a3558;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--warm-white);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: rgba(13, 31, 60, 0.95);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-links a:hover {
+    color: var(--gold);
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  .blog-post {
+    min-height: 100vh;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    background: var(--warm-white);
+  }
+
+  .blog-post-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .back-link {
+    display: inline-block;
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    transition: color 0.2s ease;
+  }
+
+  .back-link:hover {
+    color: var(--gold-light);
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .blog-meta {
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 20px;
+  }
+
+  .blog-content {
+    color: rgba(255,255,255,0.85);
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+  .blog-content p {
+    margin-bottom: 24px;
+  }
+
+  .blog-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 48px;
+    margin-bottom: 24px;
+    line-height: 1.3;
+  }
+
+  .blog-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+
+  .blog-content ul, .blog-content ol {
+    margin-left: 24px;
+    margin-bottom: 24px;
+    line-height: 1.9;
+  }
+
+  .blog-content li {
+    margin-bottom: 12px;
+  }
+
+  .blog-content strong {
+    color: var(--gold-light);
+    font-weight: 600;
+  }
+
+  .cta-box {
+    background: rgba(201,168,76,0.1);
+    border-left: 4px solid var(--gold);
+    padding: 32px;
+    margin: 48px 0;
+    border-radius: 4px;
+  }
+
+  .cta-box h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  footer {
+    background: var(--warm-white);
+    border-top: 1px solid rgba(201,168,76,0.2);
+    padding: 28px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer span {
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 900px) {
+    nav { padding: 0 30px; }
+    .nav-links { gap: 20px; }
+    .container { padding: 0 30px; }
+    h1 { font-size: 36px; }
+    .blog-content h2 { font-size: 28px; }
+    footer { flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="index.html" class="nav-logo">Bohdan Beisiuk</a>
+  <ul class="nav-links">
+    <li><a href="index.html#help">How I Help</a></li>
+    <li><a href="index.html#case-studies">Case Studies</a></li>
+    <li><a href="index.html#testimonials">Testimonials</a></li>
+    <li><a href="index.html#blog">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- BLOG POST -->
+<section class="blog-post">
+  <div class="container">
+    <div class="blog-post-content">
+      
+      <a href="index.html#blog" class="back-link">← Back to Blog</a>
+      
+      <h1>How to Scale a B2B Outreach Team from 0-30 People</h1>
+      
+      <div class="blog-meta">
+        <span>April 15, 2026</span>
+        <span>•</span>
+        <span>10 min read</span>
+      </div>
+
+      <div class="blog-content">
+        
+        <p>When we started our marketplace in 2018, we had a single goal: build the world's largest B2B directory of creative agencies. But there was one problem—we had zero agencies in the directory and no team to find them.</p>
+
+        <p>Over the next 3 years, we scaled our outreach team from zero to 30 people, growing the marketplace from 0 to 14,000+ agencies. This article breaks down exactly how we did it.</p>
+
+        <h2>The Challenge</h2>
+        
+        <p>Imagine this: You have a product nobody has heard of, in a market with no demand signals, and you need to convince thousands of busy business owners to join your platform. And you need to do it with a global team spread across multiple time zones.</p>
+
+        <p>That was our starting position. We couldn't rely on inbound. We couldn't afford expensive marketing. We needed to build an outreach machine that could work at scale—and we needed to do it with people from around the world who had never worked together before.</p>
+
+        <p>The biggest challenge wasn't just scaling the team. It was finding the right people globally, teaching them our process, and turning them into effective professionals regardless of their background or location.</p>
+
+        <h2>The Solution</h2>
+
+        <h3>1. Start With Process, Not People</h3>
+        
+        <p>Before we hired a single person, we created a detailed plan and roadmap for how we would scale. We knew exactly what we wanted to build, when we wanted to build it, and how we would measure success. This plan became our foundation.</p>
+
+        <p>We documented our exact process and created a repeatable system that anyone could follow. Once we had a playbook that worked for one person, we could teach it to everyone else—regardless of where they were in the world. This was critical. We weren't hiring experienced professionals; we were hiring smart people who could learn our system.</p>
+
+        <h3>2. Hire for Coachability, Not Experience</h3>
+        
+        <p>We didn't hire seasoned professionals with years of industry experience. Instead, we looked for specific qualities:</p>
+
+        <ul>
+          <li><strong>Coachability:</strong> People who welcomed feedback and iterated quickly</li>
+          <li><strong>Work ethic:</strong> People who would outwork everyone else</li>
+          <li><strong>Growth mindset:</strong> People who saw this role as a career opportunity, not just a job</li>
+        </ul>
+
+        <p>We started by hiring 2 data collectors. Once they adapted and completed onboarding, we slowly began expanding. At one month, we hired 6 more data collectors. We continued this steady growth, and eventually we had nearly 25 data collectors and account representatives working in parallel.</p>
+
+        <p>Many had worked in completely different fields. What mattered was their attitude and hunger to learn. This hiring philosophy paid off massively. We invested heavily in their development, which created loyalty, reduced turnover, and built a culture of continuous improvement.</p>
+
+        <h3>3. Invest in Teaching & Systems</h3>
+        
+        <p>Because we were hiring people with no relevant experience, teaching became our competitive advantage. We created:</p>
+
+        <ul>
+          <li><strong>Comprehensive onboarding playbook:</strong> A structured program to get everyone productive quickly</li>
+          <li><strong>Constant support:</strong> Daily check-ins and open channels for questions</li>
+          <li><strong>1-on-1 coaching:</strong> Every team member got personalized feedback on their performance</li>
+          <li><strong>Weekly meetings:</strong> Team syncs sharing best practices, new tools, and strategy updates</li>
+          <li><strong>Shared knowledge base:</strong> Templates, scripts, processes, and lessons documented for everyone</li>
+        </ul>
+
+        <p>This infrastructure enabled 30 people across multiple countries to work like one cohesive unit. We weren't just managing a team; we were building a school.</p>
+
+        <h3>A Real Example: From Data Collector to Department Head</h3>
+        
+        <p>One of our best success stories shows exactly what this teaching-focused approach could accomplish.</p>
+
+        <p>We hired a data coordinator whose job was simple: collect prospect lists and track data quality. He was excellent at detail-oriented work.</p>
+
+        <p>Within 6 months, he saw the impact the team was having and asked to learn more. We trained him. He started helping with outreach on the side—and he was naturally good at it.</p>
+
+        <p>As a strong data collector, he became a team lead, managing 5-7 other data collectors. After proving his managerial skills, we promoted him to Data Manager and Head of the Department, overseeing both the team leaders and the entire data infrastructure.</p>
+
+        <p>He went from data coordinator to managing an entire function. He didn't have an MBA. He didn't have 10 years of experience. What he had was coachability, work ethic, and access to a system and culture that invested in his growth.</p>
+
+        <p>This wasn't a one-off. We had dozens of similar stories. People started as data collectors and became managers. People started with no relevant experience and became our best performers. The system enabled growth.</p>
+
+        <h3>4. Measure Everything & Optimize</h3>
+        
+        <p>Data transparency meant we could quickly identify what was working and what wasn't. We tracked data quality metrics, collection efficiency, team performance across regions, and career progression opportunities.</p>
+
+        <p>Global talent meant we could learn from the best performers everywhere and teach their methods to the entire team.</p>
+
+        <h3>5. Create Incentive Alignment</h3>
+        
+        <p>We paid for results, not just activity. Team members who collected better quality data earned performance bonuses. Our sales team earned bonuses when they reached 110% of their targets. This aligned everyone's motivation with company goals.</p>
+
+        <p>We also rewarded growth. Team members who developed others, created training materials, or became managers earned more. This incentivized the culture we wanted: people who lifted others up.</p>
+
+        <div class="cta-box">
+          <h3>The Results</h3>
+          <p>By scaling our global team from 0 to 30 people across multiple countries, we were able to:</p>
+          <ul>
+            <li>Add 14,000+ agencies to our directory</li>
+            <li>Generate millions in ARR</li>
+            <li>Help the company scale to 100+ employees</li>
+            <li>Build a repeatable growth machine that worked across time zones</li>
+            <li>Develop dozens of team members into leaders and managers</li>
+            <li>Create a culture where people saw their role as a career, not just a job</li>
+          </ul>
+        </div>
+
+        <h2>Key Takeaways</h2>
+
+        <p><strong>1. Process comes before scale.</strong> Don't hire 10 people until 1 person can consistently execute your playbook—especially when those people are in different countries.</p>
+
+        <p><strong>2. Global hiring is a superpower, not a constraint.</strong> When you hire the best talent regardless of location, you get better people, more perspectives, and 24-hour coverage. Invest in systems to make it work.</p>
+
+        <p><strong>3. Teaching is your competitive advantage.</strong> Don't hire experienced people. Hire coachable people and invest heavily in developing them. You'll build loyalty, reduce turnover, and create a learning culture.</p>
+
+        <p><strong>4. Culture and incentives matter more than geography.</strong> When your global team believes in what they're doing and sees a path to growth, time zone differences disappear.</p>
+
+        <p><strong>5. Your best leaders come from within.</strong> The person managing your most important function might be someone who started as a data collector. Invest in their growth and watch them thrive.</p>
+
+        <h2>What's Next?</h2>
+
+        <p>If you're building a global B2B outreach team and want help with strategy, hiring, training structure, or how to manage across time zones—let's talk. This is where I spend most of my time now, and I'd love to help you avoid the mistakes we made and accelerate your growth.</p>
+
+        <p><a href="index.html#contact" style="color: var(--gold); text-decoration: none; font-weight: 600;">Get in touch →</a></p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Bohdan Beisiuk</span>
+  <span>Business Development · B2B Strategy · Outreach</span>
+</footer>
+
+</body>
+</html>
