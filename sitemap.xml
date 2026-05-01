@@ -4,7 +4,7 @@
   <!-- HOMEPAGE (Contains all main sections) -->
   <url>
     <loc>https://bohdanbeisiuk.com/</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,42 +12,42 @@
   <!-- HOMEPAGE SECTIONS (Anchor links) -->
   <url>
     <loc>https://bohdanbeisiuk.com/#help</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://bohdanbeisiuk.com/#case-studies</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://bohdanbeisiuk.com/#blog</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://bohdanbeisiuk.com/#testimonials</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://bohdanbeisiuk.com/#experience</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://bohdanbeisiuk.com/#contact</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -77,6 +77,20 @@
   <url>
     <loc>https://bohdanbeisiuk.com/blog-post-4.html</loc>
     <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bohdanbeisiuk.com/blog-post-5.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bohdanbeisiuk.com/blog-post-6.html</loc>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
