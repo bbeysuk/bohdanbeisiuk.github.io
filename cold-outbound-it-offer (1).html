@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bohdan Beisiuk — cold outbound campaign builds for B2B companies. ICP, messaging, sequences, CRM, and the team that runs it, built as one system.">
+<meta name="keywords" content="Cold Outbound, B2B, Lead Generation, Outreach, Business Development">
+<meta name="author" content="Bohdan Beisiuk">
+<meta property="og:title" content="Cold Outbound Builds for Companies — Bohdan Beisiuk">
+<meta property="og:description" content="I build cold outbound campaigns for B2B companies — ICP, messaging, sequences, CRM, and the team that runs it.">
+<meta property="og:type" content="website">
+<title>Cold Outbound Builds for Companies — Bohdan Beisiuk</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1f3c;
+    --navy-mid: #1a3558;
+    --navy-light: #162d52;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --cream: #162d52;
+    --warm-white: #0d1f3c;
+    --text: #ffffff;
+    --muted: #a8b8cc;
+    --card-bg: #1a3558;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--warm-white);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── NAVBAR ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; height: 70px;
+    background: rgba(13, 31, 60, 0.95);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 60px; z-index: 1000; backdrop-filter: blur(10px);
+  }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: #ffffff; text-decoration: none; }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
+  .nav-links a { font-size: 13px; color: rgba(255,255,255,0.7); text-decoration: none; font-weight: 500; transition: color 0.2s ease; letter-spacing: 0.5px; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta { background: var(--gold); color: #fff; padding: 10px 20px; border-radius: 3px; font-size: 12.5px; font-weight: 600; letter-spacing: 0.4px; }
+  .nav-cta:hover { color: #fff !important; background: var(--gold-light); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 90vh; background: #0d1f3c; display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden; padding-top: 70px;
+  }
+  .hero::before { content: ''; position: absolute; top: -200px; right: -200px; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%); pointer-events: none; }
+  .hero::after { content: ''; position: absolute; bottom: -100px; left: -100px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 70%); pointer-events: none; }
+
+  .hero-left { display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; padding: 60px 80px; max-width: 780px; position: relative; z-index: 2; opacity: 0; transform: translateY(20px); animation: slideIn 0.9s ease forwards 0.2s; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 10px; color: var(--gold); font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 28px; }
+  .hero-tag::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
+
+  h1 { font-family: 'Playfair Display', serif; font-size: clamp(48px, 6.5vw, 78px); font-weight: 900; color: #ffffff; line-height: 1.1; margin-bottom: 12px; }
+  h1 span { color: var(--gold); display: block; }
+
+  .hero-subtitle { font-size: 15px; color: rgba(255,255,255,0.55); font-weight: 300; letter-spacing: 1px; margin-bottom: 36px; }
+  .hero-summary { font-size: 15.5px; color: rgba(255,255,255,0.78); line-height: 1.75; max-width: 560px; margin: 0 auto 48px; font-weight: 300; }
+  .hero-summary strong { color: var(--gold-light); font-weight: 500; }
+
+  .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; border-radius: 4px; cursor: pointer; transition: all 0.3s ease; text-decoration: none; border: none; }
+  .btn-gold { background: var(--gold); color: #ffffff; }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,0.35); }
+  .btn-outline { background: transparent; color: rgba(255,255,255,0.8); border: 1.5px solid rgba(255,255,255,0.25); }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+  .icon-badge { width: 52px; height: 52px; border-radius: 50%; background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.3); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+  .icon-badge svg { width: 26px; height: 26px; }
+  .case-study-icon { width: 40px; height: 40px; border-radius: 50%; background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .case-study-icon svg { width: 20px; height: 20px; }
+
+  /* ── SECTIONS ── */
+  section { padding: 140px 0; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 60px; }
+
+  .section-label { display: flex; align-items: center; gap: 14px; color: var(--gold); font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, rgba(201,168,76,0.4), transparent); }
+
+  h2 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 4vw, 52px); font-weight: 700; color: #ffffff; margin-bottom: 24px; line-height: 1.1; }
+  .section-intro { font-size: 15px; color: rgba(255,255,255,0.7); max-width: 620px; line-height: 1.8; margin-bottom: 60px; font-weight: 300; }
+  h3 { font-family: 'Playfair Display', serif; font-size: 18px; color: #ffffff; margin-bottom: 10px; }
+
+  /* ── WHO IT'S FOR ── */
+  .who-section { background: var(--cream); }
+  .who-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+  .who-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(201,168,76,0.2); border-radius: 6px; padding: 30px; transition: all 0.3s ease; }
+  .who-card:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-4px); }
+  .who-card h3 { font-size: 16.5px; margin-bottom: 8px; }
+  .who-card p { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.7; }
+
+  /* ── THE PROBLEM ── */
+  .problem-section { background: var(--warm-white); }
+  .problem-list { display: flex; flex-direction: column; gap: 0; max-width: 780px; }
+  .problem-item { display: grid; grid-template-columns: 44px 1fr; gap: 20px; padding: 26px 0; border-bottom: 1px solid rgba(201,168,76,0.15); }
+  .problem-item:first-child { border-top: 1px solid rgba(201,168,76,0.15); }
+  .problem-num { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--gold); }
+  .problem-item h3 { font-size: 16.5px; margin-bottom: 8px; }
+  .problem-item p { font-size: 13.5px; color: rgba(255,255,255,0.65); line-height: 1.75; max-width: 540px; }
+
+  /* ── HOW I HELP / PROCESS ── */
+  .help-section { background: var(--cream); }
+  .help-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; }
+  .help-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(201,168,76,0.2); border-radius: 8px; padding: 40px; transition: all 0.4s ease; position: relative; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .help-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold), transparent); opacity: 0; transition: opacity 0.3s ease; }
+  .help-card:hover::before { opacity: 1; }
+  .help-card:hover { transform: translateY(-8px); box-shadow: 0 12px 32px rgba(26,58,82,0.15); border-color: rgba(201,168,76,0.4); }
+  .help-step { color: var(--gold); font-size: 12px; font-weight: 600; letter-spacing: 1.5px; margin-bottom: 12px; }
+  .help-card h3 { font-size: 20px; margin-bottom: 12px; color: #ffffff; }
+  .help-card p { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 20px; }
+  .help-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .help-list li { font-size: 13px; color: #ffffff; padding-left: 20px; position: relative; }
+  .help-list li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+
+  /* ── OFFER / SCOPE ── */
+  .offer-section { background: var(--warm-white); }
+  .offer-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; max-width: 820px; overflow: hidden; }
+  .offer-row { display: grid; grid-template-columns: 200px 1fr; border-bottom: 1px solid rgba(201,168,76,0.15); }
+  .offer-row:last-child { border-bottom: none; }
+  .offer-row .k { padding: 22px 26px; font-size: 11.5px; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border-right: 1px solid rgba(201,168,76,0.15); }
+  .offer-row .v { padding: 22px 26px; font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.8; }
+  .offer-cta { margin-top: 36px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .offer-cta p { font-size: 13px; color: rgba(255,255,255,0.55); max-width: 320px; line-height: 1.7; }
+
+  /* ── CASE STUDY ── */
+  .case-studies-section { background: var(--cream); }
+  .case-studies-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px; }
+  .case-study-card { background: var(--warm-white); border: 1px solid rgba(201,168,76,0.2); border-radius: 6px; padding: 40px; transition: all 0.4s ease; position: relative; overflow: hidden; box-shadow: 0 2px 8px rgba(26,58,82,0.06); }
+  .case-study-card:hover { background: rgba(255,255,255,0.04); border-color: rgba(201,168,76,0.4); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(26,58,82,0.12); }
+  .case-study-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+  .case-study-meta-left { display: flex; align-items: center; gap: 14px; }
+  .case-study-company { font-size: 12px; color: var(--gold); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+  .case-study-period { font-size: 11px; color: rgba(255,255,255,0.7); letter-spacing: 0.5px; }
+  .case-study-challenge { margin-bottom: 20px; }
+  .case-study-challenge-label { font-size: 11px; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .case-study-challenge p { font-size: 13.5px; color: #ffffff; line-height: 1.6; }
+  .case-study-result { background: rgba(201,168,76,0.08); border-left: 3px solid var(--gold); padding: 16px; border-radius: 2px; }
+  .case-study-result-label { font-size: 10px; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; }
+  .case-study-result p { font-size: 13px; color: #ffffff; font-weight: 500; line-height: 1.5; }
+
+  /* ── ACHIEVEMENTS ── */
+  .achievements-section { background: var(--warm-white); position: relative; overflow: hidden; }
+  .achievements-section::before { content: ''; position: absolute; top: -300px; right: -300px; width: 800px; height: 800px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 60%); }
+  .achievements-section h2, .achievements-section .section-label, .achievements-section .section-intro { position: relative; z-index: 1; }
+  .achievements-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; position: relative; z-index: 1; }
+  .achievement-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(201,168,76,0.2); border-radius: 4px; padding: 36px 28px; text-align: center; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+  .achievement-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.3); border-color: var(--gold); transform: translateY(-4px); }
+  .achievement-num { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 900; color: var(--gold); line-height: 1; margin-bottom: 12px; }
+  .achievement-desc { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.6; }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-section { background: var(--cream); }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; }
+  .testimonial-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(201,168,76,0.2); border-radius: 6px; padding: 32px; transition: all 0.4s ease; position: relative; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+  .testimonial-card:hover { transform: translateY(-8px); box-shadow: 0 12px 32px rgba(0,0,0,0.3); border-color: rgba(201,168,76,0.4); }
+  .testimonial-quote { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.8; margin-bottom: 24px; font-style: italic; position: relative; padding-left: 20px; }
+  .testimonial-quote::before { content: '"'; position: absolute; left: 0; top: -10px; font-size: 40px; color: var(--gold); opacity: 0.3; }
+  .testimonial-author { display: flex; align-items: center; gap: 12px; border-top: 1px solid rgba(201,168,76,0.2); padding-top: 16px; }
+  .testimonial-info h4 { font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 2px; font-family: 'DM Sans', sans-serif; }
+  .testimonial-info p { font-size: 12px; color: rgba(255,255,255,0.5); font-family: 'DM Sans', sans-serif; }
+  .testimonial-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 12px; font-size: 11px; color: var(--gold); text-decoration: none; font-weight: 600; letter-spacing: 0.5px; }
+  .testimonial-link:hover { color: var(--gold-light); }
+
+  /* ── TOOLS ── */
+  .tools-section { background: var(--warm-white); }
+  .tools-wrap { display: flex; flex-wrap: wrap; gap: 12px; }
+  .tool-tag { padding: 10px 20px; background: rgba(255,255,255,0.04); border: 1px solid rgba(201,168,76,0.2); border-radius: 2px; font-size: 13px; font-weight: 500; color: #ffffff; letter-spacing: 0.3px; transition: all 0.25s ease; cursor: default; box-shadow: 0 1px 3px rgba(26, 58, 82, 0.05); }
+  .tool-tag:hover { background: var(--gold); color: #ffffff; border-color: var(--gold); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(201, 168, 76, 0.2); }
+
+  /* ── CONTACT ── */
+  .contact-section { background: var(--cream); }
+  .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: flex-start; }
+  .contact-info h3 { font-size: 24px; margin-bottom: 16px; color: #ffffff; }
+  .contact-text { font-size: 15px; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 36px; }
+  .contact-details { display: flex; flex-direction: column; gap: 20px; }
+  .contact-detail-row { display: flex; gap: 16px; align-items: flex-start; }
+  .contact-detail-icon { width: 40px; height: 40px; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.3); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 18px; flex-shrink: 0; }
+  .contact-detail-content { flex: 1; }
+  .contact-detail-label { font-size: 12px; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .contact-detail-value { font-size: 14px; color: #ffffff; }
+  .contact-detail-value a { color: var(--gold); text-decoration: none; transition: color 0.2s ease; }
+  .contact-detail-value a:hover { color: #ffffff; text-decoration: underline; }
+  .contact-note { font-size: 12.5px; color: rgba(255,255,255,0.45); margin-top: 28px; line-height: 1.7; max-width: 420px; }
+
+  /* ── CONTACT FORM ── */
+  .contact-form { background: var(--warm-white); border: 1px solid rgba(201,168,76,0.2); border-radius: 6px; padding: 40px; box-shadow: 0 2px 8px rgba(26, 58, 82, 0.06); }
+  .contact-form h3 { font-size: 20px; margin-bottom: 24px; color: #ffffff; }
+  .form-group { margin-bottom: 20px; }
+  .form-group label { display: block; font-size: 12px; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 14px; background: rgba(255,255,255,0.04); border: 1px solid rgba(201,168,76,0.2); border-radius: 4px; color: #ffffff; font-family: 'DM Sans', sans-serif; font-size: 13px; transition: all 0.2s ease; }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.7); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; background: var(--warm-white); border-color: var(--gold); box-shadow: 0 0 0 2px rgba(201,168,76,0.1); }
+  .form-group textarea { min-height: 100px; resize: vertical; }
+  .form-submit { width: 100%; padding: 14px; background: var(--gold); color: #ffffff; border: none; border-radius: 4px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; }
+  .form-submit:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,0.35); }
+  .form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+  .form-message { margin-top: 16px; padding: 12px; border-radius: 4px; font-size: 13px; text-align: center; display: none; }
+  .form-message.success { background: rgba(15, 110, 86, 0.15); color: #3ecfa5; border: 1px solid rgba(15, 110, 86, 0.3); display: block; }
+  .form-message.error { background: rgba(169, 45, 45, 0.15); color: #e2726a; border: 1px solid rgba(169, 45, 45, 0.3); display: block; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--warm-white); border-top: 1px solid rgba(201,168,76,0.2); padding: 28px 60px; display: flex; justify-content: space-between; align-items: center; }
+  footer span { font-size: 12px; color: rgba(255,255,255,0.7); letter-spacing: 0.5px; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes slideIn { to { opacity: 1; transform: translateX(0); } }
+  @keyframes fadeIn { to { opacity: 1; } }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 0 30px; }
+    .nav-links { gap: 20px; }
+    .hero { grid-template-columns: 1fr; padding-top: 70px; }
+    .hero-left { padding: 60px 40px 40px; }
+    .container { padding: 0 30px; }
+    .contact-container { grid-template-columns: 1fr; gap: 40px; }
+    .offer-row { grid-template-columns: 1fr; }
+    .offer-row .k { border-right: none; border-bottom: 1px solid rgba(201,168,76,0.15); }
+    footer { flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="#hero" class="nav-logo">Bohdan Beisiuk <span>· Outbound</span></a>
+  <ul class="nav-links">
+    <li><a href="#help">The Build</a></li>
+    <li><a href="#offer">The Offer</a></li>
+    <li><a href="#case-studies">Case Studies</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#contact" class="nav-cta">Book a Call</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Cold Outbound · For B2B Companies</div>
+    <h1>Outbound built<span>like a system</span></h1>
+    <p class="hero-subtitle">ICP · Messaging · Sequences · CRM · Team</p>
+    <p class="hero-summary">
+      I build cold outbound campaigns for <strong>B2B companies looking to grow their pipeline</strong> — engineered as one system, not assembled from generic templates.
+      <br><br>
+      Same approach that took a B2B directory from 0 to 14,000+ agencies. No pricing published here on purpose — every build is scoped to your ICP after a short call.
+    </p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-gold">Book a Call</a>
+      <a href="#help" class="btn btn-outline">See the Process</a>
+    </div>
+  </div>
+</section>
+
+<!-- THE PROBLEM -->
+<section class="problem-section">
+  <div class="container">
+    <div class="section-label">Diagnosis</div>
+    <h2>Most companies' outbound is assembled, not engineered.</h2>
+    <p class="section-intro">Before any build, I look at what's already there. The same three faults show up in almost every company I audit.</p>
+
+    <div class="problem-list">
+      <div class="problem-item">
+        <div class="problem-num">01</div>
+        <div>
+          <h3>A founder doing outbound part-time</h3>
+          <p>The person best placed to close deals is the one sending 20 cold emails a week between everything else. It never gets the volume or consistency to compound.</p>
+        </div>
+      </div>
+      <div class="problem-item">
+        <div class="problem-num">02</div>
+        <div>
+          <h3>Messaging that reads like every other competitor</h3>
+          <p>Generic pitches land in the same inbox as fifty identical ones. No ICP narrow enough, no proof specific enough, to earn a reply.</p>
+        </div>
+      </div>
+      <div class="problem-item">
+        <div class="problem-num">03</div>
+        <div>
+          <h3>No system connecting outreach to the pipeline</h3>
+          <p>Replies land in a personal inbox instead of a CRM. Follow-up is improvised, nothing is measured, and growth depends on one person remembering to reply.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE BUILD -->
+<section class="help-section" id="help">
+  <div class="container">
+    <div class="section-label">The Build</div>
+    <h2>Five stages, run in order.</h2>
+    <p class="section-intro">The same sequence used to take a 4-person team's directory from zero to 14,000 agencies — adapted for cold outbound.</p>
+    <div class="help-grid">
+
+      <div class="help-card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="9" stroke="#c9a84c" stroke-width="1.4"/>
+            <circle cx="12" cy="12" r="5" stroke="#c9a84c" stroke-width="1.4"/>
+            <circle cx="12" cy="12" r="1.6" fill="#c9a84c"/>
+          </svg>
+        </div>
+        <div class="help-step">Stage 01</div>
+        <h3>Blueprint the ICP</h3>
+        <p>Which companies, which industry, which trigger events — precise enough that a list of 500 accounts either clearly fits your service or clearly doesn't.</p>
+        <ul class="help-list">
+          <li>Target industry & company size</li>
+          <li>Buying signals & trigger events</li>
+          <li>Prioritised account list</li>
+        </ul>
+      </div>
+
+      <div class="help-card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="5.5" width="18" height="13" rx="1.5" stroke="#c9a84c" stroke-width="1.4"/>
+            <path d="M3.5 6.5L12 13L20.5 6.5" stroke="#c9a84c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="help-step">Stage 02</div>
+        <h3>Draft the message</h3>
+        <p>Offer, angle, and proof written for your buyer specifically — proving you understand their business, not just their industry.</p>
+        <ul class="help-list">
+          <li>Offer & positioning</li>
+          <li>Specific, non-generic proof points</li>
+          <li>Messaging tested across segments</li>
+        </ul>
+      </div>
+
+      <div class="help-card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="5" cy="6" r="2.2" stroke="#c9a84c" stroke-width="1.4"/>
+            <circle cx="19" cy="6" r="2.2" stroke="#c9a84c" stroke-width="1.4"/>
+            <circle cx="12" cy="18" r="2.2" stroke="#c9a84c" stroke-width="1.4"/>
+            <path d="M6.9 7.2L11 16.2M17.1 7.2L13 16.2M7.2 6H16.8" stroke="#c9a84c" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <div class="help-step">Stage 03</div>
+        <h3>Assemble the sequence</h3>
+        <p>Email, LinkedIn, and call cadence wired together with timing that respects how your buyers actually decide.</p>
+        <ul class="help-list">
+          <li>Multi-channel cadence, live</li>
+          <li>Apollo / Dripify / Woodpecker setup</li>
+          <li>Deliverability & sender health</li>
+        </ul>
+      </div>
+
+      <div class="help-card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 5H20L14 13V19L10 17V13L4 5Z" stroke="#c9a84c" stroke-width="1.4" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="help-step">Stage 04</div>
+        <h3>Wire the CRM</h3>
+        <p>Pipeline stages, ownership, and handoff rules so replies never sit unanswered and nothing falls between outreach and sales or delivery.</p>
+        <ul class="help-list">
+          <li>Pipeline & stage definitions</li>
+          <li>Reply routing & handoff rules</li>
+          <li>Reporting view for the team</li>
+        </ul>
+      </div>
+
+      <div class="help-card">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 16a8 8 0 1 1 16 0" stroke="#c9a84c" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M12 16L16 10" stroke="#c9a84c" stroke-width="1.4" stroke-linecap="round"/>
+            <circle cx="12" cy="16" r="1.4" fill="#c9a84c"/>
+          </svg>
+        </div>
+        <div class="help-step">Stage 05</div>
+        <h3>Commission & tune</h3>
+        <p>Launch, read the reply data weekly, and adjust messaging and targeting. Then, if needed, hire and train an SDR to run it without you.</p>
+        <ul class="help-list">
+          <li>Weekly performance review</li>
+          <li>Ongoing message tuning</li>
+          <li>Optional SDR hiring & training</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- THE OFFER -->
+<section class="offer-section" id="offer">
+  <div class="container">
+    <div class="section-label">Scope of Work</div>
+    <h2>What's in the build.</h2>
+    <p class="section-intro">One engagement, scoped to your ICP and current stage — not a fixed package sold the same way to every company.</p>
+
+    <div class="offer-box">
+      <div class="offer-row"><div class="k">Who it's for</div><div class="v">B2B companies that need cold outbound running without hiring a full BD function first — from early-stage startups to established teams looking to scale pipeline.</div></div>
+      <div class="offer-row"><div class="k">What's built</div><div class="v">ICP & account list, messaging & offer, live multi-channel sequence, CRM & pipeline setup — plus, if needed, a hired and trained SDR to run it going forward.</div></div>
+      <div class="offer-row"><div class="k">Timeline</div><div class="v">Typically 4–6 weeks to a live, tuned campaign; ongoing management or team handover after, by agreement.</div></div>
+      <div class="offer-row"><div class="k">Investment</div><div class="v">Scoped after a short call — priced to your account list and ICP, not a generic package rate.</div></div>
+    </div>
+
+    <div class="offer-cta">
+      <a href="#contact" class="btn btn-gold">Book a Call</a>
+      <p>20 minutes to walk through your current outbound, your ICP, and whether this is a fit — no deck, no pitch.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="case-studies-section" id="case-studies">
+  <div class="container">
+    <div class="section-label">Real Work</div>
+    <h2>Proof it works</h2>
+    <div class="case-studies-grid">
+
+      <div class="case-study-card">
+        <div class="case-study-meta">
+          <div class="case-study-meta-left">
+            <div class="case-study-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 17L9.5 11L13.5 14.5L20 6" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15 6H20V11" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="case-study-company">DesignRush</span>
+          </div>
+          <span class="case-study-period">2019–2022</span>
+        </div>
+        <h3>Scaling a B2B Tech Directory from Zero to 14k Agencies</h3>
+        <div class="case-study-challenge">
+          <div class="case-study-challenge-label">The Challenge</div>
+          <p>A 4-person startup wanted to become the go-to B2B directory for brands to find agencies. Zero agencies in the directory, no team to source them.</p>
+        </div>
+        <div class="case-study-result">
+          <div class="case-study-result-label">The Result</div>
+          <p>Built outreach team from scratch (0→30 people), designed large-scale prospecting campaigns, and grew the directory 0→14,000 agencies in 3 years. Company scaled to 100+ employees.</p>
+        </div>
+      </div>
+
+      <div class="case-study-card">
+        <div class="case-study-meta">
+          <div class="case-study-meta-left">
+            <div class="case-study-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="9" stroke="#c9a84c" stroke-width="1.4"/>
+                <path d="M3 12H21M12 3C14.5 5.5 15.7 8.5 15.7 12C15.7 15.5 14.5 18.5 12 21C9.5 18.5 8.3 15.5 8.3 12C8.3 8.5 9.5 5.5 12 3Z" stroke="#c9a84c" stroke-width="1.2"/>
+              </svg>
+            </div>
+            <span class="case-study-company">Vision Business Development</span>
+          </div>
+          <span class="case-study-period">2023–2026</span>
+        </div>
+        <h3>30% Reply Rate on Cross-Border Outbound</h3>
+        <div class="case-study-challenge">
+          <div class="case-study-challenge-label">The Challenge</div>
+          <p>European tech companies had no clear pathway to GCC investors. Cultural and market gaps made direct outreach ineffective.</p>
+        </div>
+        <div class="case-study-result">
+          <div class="case-study-result-label">The Result</div>
+          <p>Built and ran outbound campaigns achieving a 30% reply rate, well above the 2–5% industry norm, sourcing real investment partnerships.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="achievements-section">
+  <div class="container">
+    <div class="section-label">By the Numbers</div>
+    <h2>Measured output</h2>
+    <p class="section-intro">From building DesignRush's outreach function and running cross-border BD for European and GCC partners.</p>
+    <div class="achievements-grid">
+      <div class="achievement-card">
+        <div class="achievement-num">0→14K</div>
+        <div class="achievement-desc">Agencies onboarded to a B2B tech directory, built from an empty database</div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-num">4→100+</div>
+        <div class="achievement-desc">Company headcount growth run in parallel with the outreach build</div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-num">0→30</div>
+        <div class="achievement-desc">International outreach team hired, trained, and managed from scratch</div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-num">30%</div>
+        <div class="achievement-desc">Reply rate sustained on outbound campaigns, against a 2–5% industry norm</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section" id="testimonials">
+  <div class="container">
+    <div class="section-label">Social Proof</div>
+    <h2>What People Say</h2>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <p class="testimonial-quote">Bohdan led the business development direction with high level of ownership and strategic focus. He oversaw the full BD cycle, managed SDR teams, and achieved a 30% reply rate on outreach campaigns. His structured approach to building and scaling pipelines, combined with persistence in complex international environments, consistently delivered impact.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-info">
+            <h4>Konstantin Gridin</h4>
+            <p>Founder & CEO, Vision Business Development</p>
+          </div>
+        </div>
+        <a href="https://www.linkedin.com/in/konstantin-gridin/" target="_blank" class="testimonial-link">View on LinkedIn ↗</a>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-quote">Bohdan is an exceptional manager and problem solver with rare people skills. He successfully managed a team of 30 people with strong emotional intelligence and high standards. He helped us scale from 4 to over 100 people. An honest, hardworking individual who never rests till finding solutions. I would confidently recommend him for operational success.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-info">
+            <h4>Gianluca Ferruggia</h4>
+            <p>Fractional CMO & CRO, Ex-GM @ DesignRush</p>
+          </div>
+        </div>
+        <a href="https://www.linkedin.com/in/gianluca-ferruggia-a01a276b/" target="_blank" class="testimonial-link">View on LinkedIn ↗</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="tools-section">
+  <div class="container">
+    <div class="section-label">Tech Stack</div>
+    <h2>What the build runs on</h2>
+    <div class="tools-wrap">
+      <span class="tool-tag">Apollo</span>
+      <span class="tool-tag">Dripify</span>
+      <span class="tool-tag">Woodpecker</span>
+      <span class="tool-tag">SalesHandy</span>
+      <span class="tool-tag">ClickUp</span>
+      <span class="tool-tag">LinkedIn Sales Navigator</span>
+      <span class="tool-tag">CRM Systems</span>
+      <span class="tool-tag">Data Management</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-label">Book a Call</div>
+    <h2>Let's scope your build</h2>
+    <div class="contact-container">
+
+      <div class="contact-info">
+        <h3>No pricing published here</h3>
+        <p class="contact-text">
+          Every build is scoped to your ICP and current outbound after a short call — not a generic package rate. Tell me what kind of company you run and where outbound stands today.
+        </p>
+        <div class="contact-details">
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">in</div>
+            <div class="contact-detail-content">
+              <div class="contact-detail-label">LinkedIn</div>
+              <div class="contact-detail-value">
+                <a href="https://www.linkedin.com/in/bohdan007/" target="_blank">linkedin.com/in/bohdan007</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📍</div>
+            <div class="contact-detail-content">
+              <div class="contact-detail-label">Location</div>
+              <div class="contact-detail-value">Remote</div>
+            </div>
+          </div>
+        </div>
+        <p class="contact-note">20 minutes to walk through your current outbound, your ICP, and whether this is a fit — no deck, no pitch.</p>
+      </div>
+
+      <div class="contact-form">
+        <h3>Book a Call</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Work Email</label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" required>
+          </div>
+          <div class="form-group">
+            <label for="companyType">Industry / Company Type</label>
+            <select id="companyType" name="companyType" required>
+              <option value="">Select an option</option>
+              <option value="tech">Tech / SaaS</option>
+              <option value="services">Professional / Consulting Services</option>
+              <option value="manufacturing">Manufacturing / Industrial</option>
+              <option value="startup">Early-Stage Startup</option>
+              <option value="other">Something Else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Where Outbound Stands Today</label>
+            <textarea id="message" name="message" placeholder="Nothing running / a stalled sequence / need a team..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Book a Call</button>
+          <div id="formMessage" class="form-message"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Bohdan Beisiuk</span>
+  <span>Cold Outbound · For Companies</span>
+</footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href !== '#' && document.querySelector(href)) {
+        e.preventDefault();
+        document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = this;
+    const submitBtn = form.querySelector('.form-submit');
+    const messageDiv = document.getElementById('formMessage');
+
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      companyType: document.getElementById('companyType').value,
+      message: document.getElementById('message').value,
+      timestamp: new Date().toLocaleString('en-US', { timeZone: 'UTC' })
+    };
+
+    try {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      const response = await fetch('https://formspree.io/f/xdayryvw', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        messageDiv.textContent = '✓ Got it! I\'ll follow up within 24 hours to schedule the call.';
+        messageDiv.classList.remove('error');
+        messageDiv.classList.add('success');
+        form.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      messageDiv.textContent = '✗ Unable to send. Please email directly: b.beysuk@gmail.com';
+      messageDiv.classList.remove('success');
+      messageDiv.classList.add('error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Book a Call';
+    }
+  });
+</script>
+</body>
+</html>
