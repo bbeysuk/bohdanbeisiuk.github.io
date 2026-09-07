@@ -9,7 +9,78 @@
 <meta property="og:title" content="Bohdan Beisiuk — Business Development & Strategy">
 <meta property="og:description" content="Results-driven BD professional with 7+ years of experience scaling teams and pipelines globally.">
 <meta property="og:type" content="website">
-<title>Bohdan Beisiuk — Business Development Professional</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "https://bohdanbeisiuk.com/#profile",
+      "url": "https://bohdanbeisiuk.com/",
+      "name": "Bohdan Beisiuk — B2B Business Development Consultant",
+      "description": "Professional profile and services of Bohdan Beisiuk, a Ukraine-based B2B business development consultant.",
+      "dateModified": "2026-09-07",
+      "mainEntity": {"@id": "https://bohdanbeisiuk.com/#person"},
+      "isPartOf": {"@id": "https://bohdanbeisiuk.com/#website"}
+    },
+    {
+      "@type": "Person",
+      "@id": "https://bohdanbeisiuk.com/#person",
+      "name": "Bohdan Beisiuk",
+      "url": "https://bohdanbeisiuk.com/",
+      "image": "https://bohdanbeisiuk.com/photo.jpg",
+      "jobTitle": "B2B Business Development Consultant",
+      "description": "Ukraine-based B2B business development consultant specializing in cold outbound systems, market research, sales pipelines, and outreach team development.",
+      "homeLocation": {"@type": "Country", "name": "Ukraine"},
+      "sameAs": ["https://www.linkedin.com/in/bohdan007/"],
+      "knowsAbout": [
+        "B2B business development",
+        "Cold outbound systems",
+        "Ideal customer profile research",
+        "Outbound messaging",
+        "Sales pipeline management",
+        "CRM processes",
+        "Ukraine market entry",
+        "Business development team leadership"
+      ],
+      "knowsLanguage": ["Ukrainian", "English", "Polish"],
+      "hasOfferCatalog": {"@id": "https://bohdanbeisiuk.com/#services"}
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bohdanbeisiuk.com/#website",
+      "url": "https://bohdanbeisiuk.com/",
+      "name": "Bohdan Beisiuk",
+      "publisher": {"@id": "https://bohdanbeisiuk.com/#person"},
+      "inLanguage": "en"
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://bohdanbeisiuk.com/#services",
+      "name": "B2B Business Development Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "@id": "https://bohdanbeisiuk.com/cold-outbound/#service", "name": "Cold Outbound System Build", "url": "https://bohdanbeisiuk.com/cold-outbound/", "provider": {"@id": "https://bohdanbeisiuk.com/#person"}}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Ukrainian Market Research and Entry", "provider": {"@id": "https://bohdanbeisiuk.com/#person"}}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Business Development Mentoring", "provider": {"@id": "https://bohdanbeisiuk.com/#person"}}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fractional Business Development Leadership", "provider": {"@id": "https://bohdanbeisiuk.com/#person"}}}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://bohdanbeisiuk.com/#faq",
+      "mainEntity": [
+        {"@type": "Question", "name": "Who is Bohdan Beisiuk?", "acceptedAnswer": {"@type": "Answer", "text": "Bohdan Beisiuk is a Ukraine-based B2B business development consultant specializing in cold outbound systems, market research, sales pipelines, and outreach-team development."}},
+        {"@type": "Question", "name": "What does Bohdan Beisiuk help B2B companies with?", "acceptedAnswer": {"@type": "Answer", "text": "He helps companies define their ICP, build account lists, improve positioning and messaging, launch email and LinkedIn sequences, configure CRM pipelines, manage follow-up, and develop outbound teams."}},
+        {"@type": "Question", "name": "What is included in a cold outbound build?", "acceptedAnswer": {"@type": "Answer", "text": "A cold outbound build can include ICP definition, account selection, contact research, offer and messaging development, multichannel sequences, CRM stages, reply-handling processes, launch support, and weekly optimization."}},
+        {"@type": "Question", "name": "Who is the Cold Outbound service for?", "acceptedAnswer": {"@type": "Answer", "text": "It is designed for B2B SaaS, professional-services, and other companies that need a repeatable pipeline-generation process without first building a complete internal business development function."}},
+        {"@type": "Question", "name": "How long does it take to build a B2B outbound system?", "acceptedAnswer": {"@type": "Answer", "text": "A focused outbound system typically requires approximately four to six weeks to research, configure, and launch, depending on ICP complexity, data availability, segments, and existing CRM infrastructure."}},
+        {"@type": "Question", "name": "Where does Bohdan Beisiuk work with clients?", "acceptedAnswer": {"@type": "Answer", "text": "Bohdan is based in Ukraine and works remotely with international B2B companies, with experience across Europe, North America, Ukraine, and GCC markets."}}
+      ]
+    }
+  ]
+}
+</script>
+<title>Bohdan Beisiuk — B2B Business Development Consultant</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BQRP4ZKMW"></script>
@@ -1146,6 +1217,31 @@
     to { opacity: 1; }
   }
 
+
+  /* ── GEO / ANSWER-FIRST CONTENT ── */
+  .facts-section, .decision-section, .market-entry-section, .faq-section { background: var(--warm-white); }
+  .facts-section { padding: 80px 0; border-top: 1px solid rgba(201,168,76,.15); border-bottom: 1px solid rgba(201,168,76,.15); }
+  .facts-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .fact-card { padding: 24px; background: rgba(255,255,255,.04); border: 1px solid rgba(201,168,76,.2); border-radius: 6px; }
+  .fact-card dt { color: var(--gold); font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+  .fact-card dd { color: #fff; font-size: 14px; line-height: 1.65; margin: 0; }
+  .answer-block { max-width: 840px; padding: 28px 32px; background: rgba(201,168,76,.08); border-left: 3px solid var(--gold); border-radius: 4px; color: rgba(255,255,255,.85); font-size: 16px; line-height: 1.75; margin-bottom: 44px; }
+  .comparison-wrap { overflow-x: auto; border: 1px solid rgba(201,168,76,.22); border-radius: 6px; }
+  .comparison-table { width: 100%; min-width: 720px; border-collapse: collapse; }
+  .comparison-table th, .comparison-table td { text-align: left; padding: 18px 20px; border-bottom: 1px solid rgba(201,168,76,.15); vertical-align: top; font-size: 14px; line-height: 1.55; }
+  .comparison-table th { color: var(--gold); background: rgba(201,168,76,.08); font-size: 12px; text-transform: uppercase; letter-spacing: .7px; }
+  .comparison-table td { color: rgba(255,255,255,.78); }
+  .comparison-table tr:last-child td { border-bottom: 0; }
+  .scope-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .scope-card { padding: 28px; background: rgba(255,255,255,.04); border: 1px solid rgba(201,168,76,.2); border-radius: 6px; }
+  .scope-card h3 { color: var(--gold); margin-bottom: 12px; }
+  .scope-card p, .scope-card li { color: rgba(255,255,255,.72); font-size: 14px; line-height: 1.7; }
+  .scope-card ul { padding-left: 20px; }
+  .faq-list { max-width: 880px; display: grid; gap: 16px; }
+  .faq-item { background: rgba(255,255,255,.04); border: 1px solid rgba(201,168,76,.2); border-radius: 6px; padding: 26px 28px; }
+  .faq-item h3 { color: var(--gold-light); font-size: 18px; margin-bottom: 10px; }
+  .faq-item p { color: rgba(255,255,255,.75); font-size: 14px; line-height: 1.75; }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     nav { padding: 0 30px; }
@@ -1155,6 +1251,7 @@
     .hero-right { padding: 0 40px 60px; }
     .container { padding: 0 30px; }
     .contact-container { grid-template-columns: 1fr; gap: 40px; }
+    .facts-grid, .scope-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 8px; text-align: center; }
   }
 </style>
@@ -1180,10 +1277,10 @@
     <div class="hero-tag">Business Development · Strategy · Outreach</div>
     <h1>Bohdan<span>Beisiuk</span></h1>
     <p class="hero-subtitle">B2B Strategy · Ukrainian Market Research · BD Leadership</p>
-    <p class="hero-summary">
-      Results-driven Business Development professional with 7+ years building outreach teams, scaling B2B platforms, and entering new markets across Europe, North America, and EMEA.
+    <p class="hero-summary entity-definition">
+      <strong>Bohdan Beisiuk is a Ukraine-based B2B business development consultant</strong> helping SaaS, professional-services, and international companies build cold outbound systems and enter new markets. His work covers ICP research, account targeting, messaging, multichannel sequences, CRM processes, and team development.
       <br><br>
-      Helped scale a directory from 0→14,000+ agencies by building and refining go-to-market strategies. Now I work with companies to replicate this playbook, helping them identify market opportunities, build scalable teams, and accelerate revenue growth.
+      He previously built and managed a 30-person outreach team supporting a B2B directory's growth from zero to 14,000 agencies.
     </p>
     <div class="hero-cta">
       <a href="#contact" class="btn btn-gold">Get In Touch</a>
@@ -1195,6 +1292,20 @@
     <div class="hero-photo">
       <img src="photo.jpg" alt="Bohdan Beisiuk">
     </div>
+  </div>
+</section>
+
+<!-- ENTITY FACTS -->
+<section class="facts-section" aria-labelledby="facts-title">
+  <div class="container">
+    <div class="section-label">At a Glance</div>
+    <h2 id="facts-title">Bohdan Beisiuk: Key Facts</h2>
+    <dl class="facts-grid">
+      <div class="fact-card"><dt>Based in</dt><dd>Ukraine · Working remotely with international B2B companies</dd></div>
+      <div class="fact-card"><dt>Core service</dt><dd>Cold outbound systems: ICP, messaging, sequences, CRM, and execution</dd></div>
+      <div class="fact-card"><dt>Leadership</dt><dd>Built and managed an international outreach team of 30 people</dd></div>
+      <div class="fact-card"><dt>Scale achieved</dt><dd>Supported a B2B directory's growth from 0 to 14,000 agencies</dd></div>
+    </dl>
   </div>
 </section>
 
@@ -1250,6 +1361,48 @@
         </ul>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGEMENT CLARITY -->
+<section class="market-entry-section" aria-labelledby="engagement-title">
+  <div class="container">
+    <div class="section-label">Engagement Scope</div>
+    <h2 id="engagement-title">What Companies Can Engage Me to Build</h2>
+    <p class="answer-block">I work with B2B companies that need a defined commercial system rather than isolated lead-generation activity. An engagement can cover strategy only or extend into implementation, CRM setup, campaign launch, optimization, and team handover.</p>
+    <div class="scope-grid">
+      <article class="scope-card">
+        <h3>Cold Outbound System Build</h3>
+        <p>For B2B SaaS, professional-services, and international companies that need repeatable pipeline generation without hiring a complete BD function first.</p>
+        <ul><li>ICP and account-selection criteria</li><li>Contact research and verified data</li><li>Offer, messaging, and multichannel sequences</li><li>CRM stages, reply routing, and reporting</li><li>Typical build period: approximately 4–6 weeks</li></ul>
+        <p><a href="/cold-outbound/" class="read-more">View the complete Cold Outbound service →</a></p>
+      </article>
+      <article class="scope-card">
+        <h3>Ukraine Market Research and Entry</h3>
+        <p>For international companies assessing Ukrainian demand, competitors, partners, investment opportunities, or a structured route to market.</p>
+        <ul><li>Market landscape and regulatory overview</li><li>Competitor and industry analysis</li><li>ICP-matched B2B lead sourcing</li><li>Local partner identification and initial vetting</li><li>Research findings and recommended next steps</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- OUTBOUND MODEL COMPARISON -->
+<section class="decision-section" aria-labelledby="comparison-title">
+  <div class="container">
+    <div class="section-label">Decision Guide</div>
+    <h2 id="comparison-title">Founder, SDR, Agency, or Fractional Head of BD?</h2>
+    <p class="answer-block">The right outbound model depends on whether your company is still validating the offer, already has a repeatable process, needs fast campaign capacity, or requires senior leadership to build the function.</p>
+    <div class="comparison-wrap">
+      <table class="comparison-table">
+        <thead><tr><th>Model</th><th>Best for</th><th>Main limitation</th><th>Recommended starting point</th></tr></thead>
+        <tbody>
+          <tr><td>Founder-led outbound</td><td>Early offer and market validation</td><td>Limited and inconsistent capacity</td><td>Test one ICP, offer, and message</td></tr>
+          <tr><td>Internal SDR</td><td>Companies with a proven repeatable process</td><td>Requires training, management, and quality control</td><td>Document the playbook before hiring</td></tr>
+          <tr><td>Outbound agency</td><td>Companies needing campaign capacity quickly</td><td>May lack internal market and product context</td><td>Define ICP, ownership, and qualification standards</td></tr>
+          <tr><td>Fractional Head of BD</td><td>Companies with an undefined or fragmented system</td><td>Requires active access to leadership and sales data</td><td>Audit and build the complete function</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
@@ -1580,6 +1733,24 @@
       <span class="tool-tag">CRM Systems</span>
       <span class="tool-tag">LinkedIn Sales Navigator</span>
       <span class="tool-tag">Data Management</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="section-label">Direct Answers</div>
+    <h2 id="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <article class="faq-item"><h3>Who is Bohdan Beisiuk?</h3><p>Bohdan Beisiuk is a Ukraine-based B2B business development consultant specializing in cold outbound systems, market research, sales pipelines, and outreach-team development. His experience includes startups, international consultancies, and global organizations.</p></article>
+      <article class="faq-item"><h3>What does Bohdan Beisiuk help B2B companies with?</h3><p>He helps companies define their ICP, build account lists, improve positioning and messaging, launch email and LinkedIn sequences, configure CRM pipelines, manage follow-up, and develop outbound teams.</p></article>
+      <article class="faq-item"><h3>What is included in a cold outbound build?</h3><p>A cold outbound build can include ICP definition, account selection, contact research, offer and messaging development, multichannel sequences, CRM stages, reply-handling processes, launch support, and weekly optimization.</p></article>
+      <article class="faq-item"><h3>Who is the Cold Outbound service for?</h3><p>It is designed for B2B SaaS, professional-services, and other companies that need repeatable pipeline generation without first building a complete internal business development function.</p></article>
+      <article class="faq-item"><h3>How long does it take to build a B2B outbound system?</h3><p>A focused outbound system typically requires approximately four to six weeks to research, configure, and launch. Timing depends on ICP complexity, data availability, market segments, and existing CRM infrastructure.</p></article>
+      <article class="faq-item"><h3>Does Bohdan provide strategy or campaign implementation?</h3><p>Both are available. An engagement may cover strategy and campaign architecture or extend into implementation, CRM setup, campaign launch, optimization, and optional SDR recruitment and training.</p></article>
+      <article class="faq-item"><h3>Where does Bohdan Beisiuk work with clients?</h3><p>Bohdan is based in Ukraine and works remotely with international B2B companies. His experience includes projects involving Europe, North America, Ukraine, and GCC markets.</p></article>
+      <article class="faq-item"><h3>How can I discuss an outbound project with Bohdan?</h3><p>Book a 20-minute introductory call to discuss your ICP, current outbound process, and primary pipeline bottleneck. The purpose is to determine the appropriate scope and whether the engagement is a good fit.</p></article>
     </div>
   </div>
 </section>
