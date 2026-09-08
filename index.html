@@ -81,6 +81,10 @@
 }
 </script>
 <title>Bohdan Beisiuk — B2B Business Development Consultant</title>
+<meta property="og:url" content="https://bohdanbeisiuk.com/">
+<meta property="og:image" content="https://bohdanbeisiuk.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bohdanbeisiuk.com/og.png">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BQRP4ZKMW"></script>
@@ -158,6 +162,14 @@
   .nav-links a:hover {
     color: var(--gold);
   }
+  .nav-toggle { display:none; background:transparent; border:1px solid rgba(201,168,76,.5); color:#fff; border-radius:4px; padding:8px 11px; font:600 13px 'DM Sans',sans-serif; }
+  .service-link { display:inline-block; margin-top:18px; color:var(--gold-light); text-decoration:none; font-weight:600; }
+  .audit-strip { background:#13294a; border-top:1px solid rgba(201,168,76,.2); border-bottom:1px solid rgba(201,168,76,.2); }
+  .audit-inner { display:grid; grid-template-columns:1fr auto; gap:40px; align-items:center; }
+  .audit-inner p { color:var(--muted); max-width:760px; line-height:1.75; }
+  .blog-all { margin-top:36px; }
+  .blog-grid .blog-card:nth-child(n+4) { display:none; }
+  footer a { color:var(--gold-light); text-decoration:none; }
 
   /* ── HERO ── */
   .hero {
@@ -1245,7 +1257,10 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     nav { padding: 0 30px; }
-    .nav-links { gap: 20px; }
+    .nav-toggle { display:block; }
+    .nav-links { display:none; position:absolute; top:70px; left:0; right:0; padding:22px 30px; background:#0d1f3c; border-bottom:1px solid rgba(201,168,76,.25); flex-direction:column; gap:18px; }
+    .nav-links.open { display:flex; }
+    .audit-inner { grid-template-columns:1fr; }
     .hero { grid-template-columns: 1fr; padding-top: 70px; }
     .hero-left { padding: 60px 40px 40px; }
     .hero-right { padding: 0 40px 60px; }
@@ -1261,12 +1276,13 @@
 <!-- NAVBAR -->
 <nav>
   <a href="#hero" class="nav-logo">Bohdan Beisiuk</a>
-  <ul class="nav-links">
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+  <ul class="nav-links" id="primary-nav">
     <li><a href="#help">How I Help</a></li>
     <li><a href="/cold-outbound/">Outbound</a></li>
     <li><a href="#case-studies">Case Studies</a></li>
     <li><a href="#testimonials">Testimonials</a></li>
-    <li><a href="#blog">Blog</a></li>
+    <li><a href="/blog/">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -1283,7 +1299,7 @@
       He previously built and managed a 30-person outreach team supporting a B2B directory's growth from zero to 14,000 agencies.
     </p>
     <div class="hero-cta">
-      <a href="#contact" class="btn btn-gold">Get In Touch</a>
+      <a href="https://calendar.app.google/8BpJvgW9D6gM1inM9" target="_blank" rel="noopener" class="btn btn-gold" data-track="book_call" data-location="hero">Book a Free 20-Minute Call</a>
       <a href="#help" class="btn btn-outline">How I Help</a>
     </div>
   </div>
@@ -1326,6 +1342,7 @@
           <li>CRM setup & sales pipeline management</li>
           <li>Conversion optimization & follow-up</li>
         </ul>
+        <a class="service-link" href="/cold-outbound/" data-track="service_page">Explore Cold Outbound →</a>
       </div>
 
       <div class="help-card">
@@ -1337,6 +1354,7 @@
           <li>B2B lead sourcing (matched to your ICP)</li>
           <li>Investment & opportunity research</li>
         </ul>
+        <a class="service-link" href="/services/ukraine-market-entry/" data-track="service_page">Explore Market Entry →</a>
       </div>
 
       <div class="help-card">
@@ -1348,6 +1366,7 @@
           <li>Team leadership & management</li>
           <li>Personal productivity systems</li>
         </ul>
+        <a class="service-link" href="/services/bd-mentoring/" data-track="service_page">Explore BD Mentoring →</a>
       </div>
 
       <div class="help-card">
@@ -1359,9 +1378,18 @@
           <li>Team hiring & performance management</li>
           <li>Processes, playbooks & KPI frameworks</li>
         </ul>
+        <a class="service-link" href="/services/fractional-head-of-bd/" data-track="service_page">Explore Fractional Leadership →</a>
       </div>
 
     </div>
+  </div>
+</section>
+
+<!-- ENTRY OFFER -->
+<section class="audit-strip">
+  <div class="container audit-inner">
+    <div><div class="section-label">A Focused Starting Point</div><h2>Not Sure What to Fix First? Start with an Outbound Audit.</h2><p>Review your targeting, prospect data, deliverability, messaging, sequences, CRM handoff, and measurement before investing in more tools or headcount. Get a clearly scoped diagnostic and prioritized next steps.</p></div>
+    <a href="/outbound-audit/" class="btn btn-gold" data-track="service_page">Explore the Outbound Audit</a>
   </div>
 </section>
 
@@ -1428,6 +1456,7 @@
           <div class="case-study-result-label">The Result</div>
           <p>Built outreach team from scratch (0→30 people), designed and executed large-scale prospecting campaigns, and grew directory from 0→14,000 agencies in 3 years. Company scaled to 100+ employees.</p>
         </div>
+        <a class="service-link" href="/case-studies/designrush/">Read the full case study →</a>
       </div>
 
       <div class="case-study-card">
@@ -1479,6 +1508,7 @@
       </div>
 
     </div>
+    <p class="blog-all"><a href="/blog/" class="btn btn-outline">View All Articles</a></p>
   </div>
 </section>
 
@@ -1767,6 +1797,7 @@
         <p class="contact-text">
           Open to new business development opportunities, consulting engagements, and strategic partnerships. Whether you're scaling a B2B operation, building an outreach team, or expanding into new markets — let's talk.
         </p>
+        <p><a href="https://calendar.app.google/8BpJvgW9D6gM1inM9" target="_blank" rel="noopener" class="btn btn-gold" data-track="book_call" data-location="contact">Book a Free 20-Minute Call</a></p>
         <div class="contact-details">
           <div class="contact-detail-row">
             <div class="contact-detail-icon">in</div>
@@ -1824,10 +1855,18 @@
 
 <footer>
   <span>© 2026 Bohdan Beisiuk</span>
-  <span>Business Development · B2B Strategy · Outreach</span>
+  <span>Business Development · B2B Strategy · Outreach · <a href="/privacy/">Privacy</a></span>
 </footer>
 
 <script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  navToggle.addEventListener('click', () => { const open = navLinks.classList.toggle('open'); navToggle.setAttribute('aria-expanded', String(open)); });
+  navLinks.addEventListener('click', () => { navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); });
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('[data-track]');
+    if (link && typeof gtag === 'function') gtag('event', link.dataset.track, { link_url: link.href, location: link.dataset.location || 'homepage' });
+  });
   // Smooth scroll navigation
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -1869,6 +1908,7 @@
       });
 
       if (response.ok) {
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'contact' });
         messageDiv.textContent = '✓ Thanks! I\'ll be in touch within 24 hours.';
         messageDiv.classList.remove('error');
         messageDiv.classList.add('success');

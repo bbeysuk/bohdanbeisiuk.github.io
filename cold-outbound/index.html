@@ -10,6 +10,8 @@
 <meta property="og:description" content="I build cold outbound campaigns for B2B companies — ICP, messaging, sequences, CRM, and the team that runs it.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bohdanbeisiuk.com/cold-outbound/">
+<meta property="og:image" content="https://bohdanbeisiuk.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -672,10 +674,14 @@
 
 <footer>
   <span>© 2026 Bohdan Beisiuk</span>
-  <span>Cold Outbound · For Companies</span>
+  <span>Cold Outbound · For Companies · <a href="/privacy/" style="color:#e8c97a">Privacy</a></span>
 </footer>
 
 <script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date()); gtag('config','G-6BQRP4ZKMW');
+  document.addEventListener('click',function(e){const a=e.target.closest('a[href*="calendar.app.google"]');if(a)gtag('event','book_call',{link_url:a.href,location:'cold_outbound'});});
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
@@ -711,6 +717,7 @@
       });
 
       if (response.ok) {
+        gtag('event','generate_lead',{form_name:'cold_outbound_contact'});
         messageDiv.textContent = '✓ Got it! I\'ll follow up within 24 hours to schedule the call.';
         messageDiv.classList.remove('error');
         messageDiv.classList.add('success');
