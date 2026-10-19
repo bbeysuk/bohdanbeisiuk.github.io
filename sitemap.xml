@@ -4,7 +4,7 @@
   <!-- HOMEPAGE (Contains all main sections) -->
   <url>
     <loc>https://bohdanbeisiuk.com/</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -137,11 +137,12 @@
     <priority>0.8</priority>
   </url>
 
-  <url><loc>https://bohdanbeisiuk.com/blog/</loc><lastmod>2026-09-07</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://bohdanbeisiuk.com/blog/</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://bohdanbeisiuk.com/outbound-audit/</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://bohdanbeisiuk.com/services/ukraine-market-entry/</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://bohdanbeisiuk.com/services/fractional-head-of-bd/</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://bohdanbeisiuk.com/services/bd-mentoring/</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://bohdanbeisiuk.com/case-studies/designrush/</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
   <url><loc>https://bohdanbeisiuk.com/privacy/</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://bohdanbeisiuk.com/blog-post-12.html</loc><lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
