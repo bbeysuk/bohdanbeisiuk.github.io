@@ -6,6 +6,7 @@
   const week = 7 * 24 * 60 * 60 * 1000;
   const preview = new URLSearchParams(window.location.search).get('whitepaper') === 'preview';
   const startedAt = Date.now();
+  const mobile = window.matchMedia('(max-width: 600px)').matches;
   let shown = false;
   let stylesReady = false;
   let previousOverflow = '';
@@ -64,7 +65,7 @@
   function showPopup(automatic = false) {
     if (!supportsDialog || !stylesReady || dialog.open || document.visibilityState === 'hidden') return;
     if (automatic) {
-      if (shown || (!preview && isDismissed()) || document.querySelector('dialog[open]')) return;
+      if (shown || (!preview && isDismissed()) || document.querySelector('dialog[open], .nav-links.open, .navlinks.open')) return;
       const active = document.activeElement;
       if (active && (active.closest('form') || active.isContentEditable)) return;
     }
@@ -84,7 +85,7 @@
   }
   function onScroll() {
     const available = document.documentElement.scrollHeight - window.innerHeight;
-    if (available > 0 && window.scrollY / available >= 0.35 && Date.now() - startedAt >= 4000) showPopup(true);
+    if (available > 0 && window.scrollY / available >= 0.35 && Date.now() - startedAt >= (mobile ? 20000 : 4000)) showPopup(true);
   }
   launcher.addEventListener('click', event => {
     if (!supportsDialog || !stylesReady) return;
@@ -117,7 +118,7 @@
     launcher.hidden = false;
     if (preview) showPopup();
     else if (!isDismissed()) {
-      autoTimer = setTimeout(() => showPopup(true), 8000);
+      if (!mobile) autoTimer = setTimeout(() => showPopup(true), 8000);
       window.addEventListener('scroll', onScroll, { passive: true });
     }
   });

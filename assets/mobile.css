@@ -1,0 +1,60 @@
+/* Shared small-screen layout. Desktop branding stays in each page's stylesheet. */
+html { scroll-padding-top: 88px; }
+.bb-menu-toggle { display: none; }
+a:focus-visible, button:focus-visible { outline: 3px solid #e8c97a; outline-offset: 4px; }
+@media (max-width: 900px) {
+  body > nav { padding-inline: 20px; gap: 12px; }
+  body > nav .nav-logo { font-size: 19px; }
+  .bb-menu-toggle, .nav-toggle, .toggle { display: inline-flex; align-items: center; justify-content: center; min-width: 64px; min-height: 44px; background: #162d52; color: #fff; border: 1px solid #7b744f; border-radius: 5px; font: 600 15px Arial,sans-serif; cursor: pointer; }
+  body > nav .nav-links, body > nav .navlinks { display: none; position: absolute; top: 100%; left: 0; right: 0; margin: 0; padding: 16px 20px; background: #0d1f3c; border-bottom: 1px solid #7b744f; flex-direction: column; align-items: stretch; gap: 4px; max-height: calc(100dvh - 80px); overflow-y: auto; list-style: none; }
+  body > nav .nav-links.open, body > nav .navlinks.open { display: flex; }
+  body > nav .nav-links a, body > nav .navlinks a { display: flex; align-items: center; min-height: 44px; padding: 8px 12px; font-size: 16px; }
+  .bb-home .hero { min-height: auto; grid-template-columns: minmax(0,1fr); }
+  .hero-right, .hero-photo { min-width: 0; max-width: 100%; }
+  .hero-left { min-width: 0; }
+  .help-grid, .case-studies-grid, .testimonials-grid, .blog-grid { grid-template-columns: repeat(auto-fit,minmax(min(100%,300px),1fr)); }
+  body:has(.nav-links.open, .navlinks.open) .bb-whitepaper-launcher { display: none; }
+}
+@media (max-width: 600px) {
+  .container, .wrap { padding-inline: 20px; }
+  .hero-left { padding: 40px 20px 32px; }
+  .hero-right { padding: 0 20px 36px; }
+  .bb-home h1 { font-size: clamp(28px,8.4vw,46px); letter-spacing: -1px; }
+  .bb-home h1 span { margin-left: .2em; }
+  .hero-photo { height: auto; aspect-ratio: 7 / 9; margin-bottom: 16px; padding: 12px; }
+  .hero-tag { font-size: 10px; letter-spacing: 1.4px; line-height: 1.7; margin-bottom: 20px; }
+  .hero-tag::before { flex-shrink: 0; width: 20px; }
+  .hero-subtitle { font-size: 17px; line-height: 1.5; margin-bottom: 24px; color: #d6dfeb; }
+  .hero-summary { font-size: 16px; line-height: 1.7; margin-bottom: 28px; }
+  .hero-cta, .actions { flex-direction: column; align-items: stretch; gap: 12px; }
+  .btn, .button, .cta-button { max-width: 100%; min-height: 48px; justify-content: center; text-align: center; white-space: normal; }
+  .hero-cta .btn, .actions .btn, .actions .button { width: 100%; }
+  .help-grid, .case-studies-grid, .testimonials-grid, .blog-grid, .skills-grid, .achievements-grid, .who-grid { grid-template-columns: minmax(0,1fr); }
+  .help-card, .case-study-card, .testimonial-card, .contact-form, .scope-card { padding: 24px; min-width: 0; }
+  .help-card p, .scope-card p, .scope-card li, .faq-item p, .contact-text { font-size: 16px; }
+  .contact-detail-content { min-width: 0; overflow-wrap: anywhere; }
+  .form-group input, .form-group select, .form-group textarea { font-size: 16px; min-height: 48px; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { background: #fff; color: #0d1f3c; }
+  .form-submit { min-height: 48px; font-size: 16px; }
+  .timeline-header { flex-wrap: wrap; gap: 10px; }
+  .answer-block, .answer-box, .cta-box, .table-of-contents, .related-posts { padding: 22px; }
+  .blog-post { padding-top: 100px; }
+  .blog-post h1 { font-size: clamp(30px,8vw,38px); overflow-wrap: break-word; }
+  .blog-content { font-size: 17px; line-height: 1.75; overflow-wrap: anywhere; }
+  .blog-content h2 { font-size: 27px; }
+  .blog-content img { max-width: 100%; height: auto; }
+  .blog-content table { display: block; max-width: 100%; overflow-x: auto; }
+  .hero, main, footer { min-width: 0; }
+  .site-header { flex-wrap: wrap; gap: 12px; padding: 16px 20px; }
+  .site-header nav { flex-wrap: wrap; }
+  .site-header nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  .field-row { grid-template-columns: 1fr; }
+  .form-card { padding: 22px; }
+  .form-card .consent { font-size: 14px; }
+  .form-card .privacy-note, .form-card .form-help { font-size: 13px; }
+  body > footer { padding-bottom: calc(94px + env(safe-area-inset-bottom,0px)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-left, .hero-right { animation: none; opacity: 1; transform: none; }
+}
