@@ -282,6 +282,7 @@
 </style>
 <link rel="stylesheet" href="/assets/mobile.css">
 <script src="/assets/mobile.js" defer></script>
+<script src="/assets/analytics.js"></script>
 </head>
 <body>
 
@@ -690,10 +691,7 @@
 </footer>
 
 <script>
-  window.dataLayer=window.dataLayer||[];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js',new Date()); gtag('config','G-6BQRP4ZKMW');
-  document.addEventListener('click',function(e){const a=e.target.closest('a[href*="calendar.app.google"]');if(a)gtag('event','book_call',{link_url:a.href,location:'cold_outbound'});});
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
@@ -724,12 +722,13 @@
 
       const response = await fetch('https://formspree.io/f/xdayryvw', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       });
 
-      if (response.ok) {
-        gtag('event','generate_lead',{form_name:'cold_outbound_contact'});
+      const result = await response.json().catch(() => null);
+      if (response.ok && result && result.ok === true) {
+        window.bbTrack('generate_lead', {form_name: 'cold_outbound_contact', lead_type: 'consultation'});
         messageDiv.textContent = '✓ Got it! I\'ll follow up within 24 hours to schedule the call.';
         messageDiv.classList.remove('error');
         messageDiv.classList.add('success');

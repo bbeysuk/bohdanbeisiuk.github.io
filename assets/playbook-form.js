@@ -37,6 +37,7 @@
         if (response.status === 429) throw new Error('Too many requests. Please wait a few minutes and try again.');
         throw new Error('Your request could not be confirmed. Please try again or contact Bohdan below.');
       }
+      window.bbTrack('playbook_request', {form_name: 'playbook', lead_type: 'resource'});
       status.className = 'form-status success';
       status.textContent = 'Your request is confirmed. Opening the download page…';
       success.hidden = false;

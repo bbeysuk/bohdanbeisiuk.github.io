@@ -72,6 +72,7 @@
     previousFocus = document.activeElement;
     previousOverflow = document.documentElement.style.overflow;
     dialog.showModal();
+    window.bbTrack('playbook_popup_view', {trigger: automatic ? 'automatic' : 'manual'});
     document.documentElement.style.overflow = 'hidden';
     shown = true;
     // Also cap auto-display across navigation when the visitor follows another link.
